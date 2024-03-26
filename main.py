@@ -34,8 +34,8 @@ class SwitchWin(ttk.LabelFrame):
 
         # contant
         options = {'padx':2, 'pady':2, 'anchor':W}
-        self.radio = tk.BooleanVar(value=True)
-        #self.radio.set(True)
+        # self.radio = tk.BooleanVar(value=True)
+        self.radio = tk.BooleanVar()
         self.login_to_account = ttk.Radiobutton(self, variable=self.radio, text='login to account', value=True)
         #self.login_to_account['command'] = self.get_value_rb
         self.login_to_account.pack(**options)
@@ -84,7 +84,6 @@ class App(tk.Tk):
         super().__init__()
         self.title('Hello world!')
         self.geometry('300x400')
-        
         view = View(self)
 
 
